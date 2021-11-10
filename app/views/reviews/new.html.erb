@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Create your comment</h1>
+
+
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= f.input :content, label:"Content" %>
+    <%= f.input :rating, label:"Rating", collection: (1..5) %>
+    <%= f.submit %>
+  <% end %>
+</div>

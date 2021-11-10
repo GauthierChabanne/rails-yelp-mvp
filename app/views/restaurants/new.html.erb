@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Create your restaurant</h1>
+  <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name, label:"Nom du restaurant", placeholder: "Krusty's Krab" %>
+    <%= f.input :address, label:"Adresse du restaurant", placeholder: "20 000 lieux sous les mers" %>
+    <%= f.input :phone_number, label:"Numéro de téléphone du restaurant", placeholder: "00000000000"%>
+    <%= f.input :category, label:"Type de restaurant", collection: Restaurant::CATEGORIES %>
+    <%= f.submit %>
+  <% end %>
+  <br>
+  <%= link_to "Retour", restaurants_path %>
+</div>
